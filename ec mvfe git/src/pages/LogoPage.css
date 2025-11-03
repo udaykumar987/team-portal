@@ -1,0 +1,42 @@
+/* === Logo Page (Mobile 412×917) === */
+
+/* Outer black background */
+.logo-page {
+  background: #000;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* White phone frame (Figma artboard size) */
+.phone-frame {
+  position: relative;
+  width: 412px;
+  height: 917px;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Main logo (top graphic) */
+.logo-main {
+  position: absolute;
+  width: 179px;
+  height: 216px;
+  left: calc(50% - 179px / 2 + 0.5px);
+  top: calc(50% - 216px / 2 - 69.5px);
+  object-fit: contain;
+}
+
+/* Text logo (STACKLY) */
+.logo-text {
+  position: absolute;
+  width: 221px;
+  height: 83px;
+  left: calc(50% - 221px / 2 - 0.5px);
+  top: 557px;
+  object-fit: contain;
+}

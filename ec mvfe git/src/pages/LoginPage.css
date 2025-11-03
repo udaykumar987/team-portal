@@ -1,0 +1,215 @@
+.login-wrapper {
+  background: #000;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----- PHONE FRAME ----- */
+.phone-frame {
+  position: relative;
+  width: 412px;
+  height: 917px;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ----- STATUS BAR ----- */
+.status-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 47px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 16px 0;
+  z-index: 10;
+}
+
+.status-left {
+  display: flex;
+  align-items: center;
+}
+
+.status-time {
+  font-family: "SF Pro", sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: #000;
+}
+
+.status-right {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.status-right img {
+  height: 13px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ----- HEADER ----- */
+.login-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 412px;
+  height: 202px;
+  background: #ffcd82;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 20px;
+}
+
+.login-header h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #000;
+}
+
+/* Back button */
+.back-btn {
+  position: absolute;
+  top: 64px;
+  left: 16px;
+  font-size: 22px;
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+}
+
+/* ----- FORM ----- */
+.login-form {
+  position: absolute;
+  top: 244px;
+  left: 16px;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.form-group label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+.form-group input {
+  border: none;
+  border-bottom: 0.8px solid #acacac;
+  padding: 5px 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+.form-group input::placeholder {
+  color: #979696;
+}
+
+/* Forgot Password */
+.forgot {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #b2afaf;
+  text-align: right;
+  cursor: pointer;
+}
+
+/* Login button */
+.login-btn {
+  margin-top: 5px;
+  background: #ff9900;
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.login-btn:hover {
+  transform: scale(1.03);
+}
+
+/* ----- DIVIDER ----- */
+.divider {
+  position: absolute;
+  top: 542px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.line {
+  width: 127px;
+  border: 0.8px solid #acacac;
+}
+.divider span {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: #9d9999;
+}
+
+/* ----- CONTINUE WITH ----- */
+.continue-text {
+  position: absolute;
+  top: 603px;
+  width: 100%;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  color: #6b6b6b;
+}
+
+/* ----- SOCIAL ICONS ----- */
+.social-icons {
+  position: absolute;
+  top: 628px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+}
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* ----- SIGNUP TEXT ----- */
+.signup-text {
+  position: absolute;
+  top: 679px;
+  width: 100%;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #6b6b6b;
+}
+.signup-link {
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+}
