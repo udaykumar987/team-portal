@@ -1,0 +1,131 @@
+.header {
+  width: 100%;
+  height: 90px; 
+  background-color: #ffe7c4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(1rem, 5vw, 70px);
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* ---------------- LOGO ---------------- */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ---------------- SEARCH BAR ---------------- */
+.header-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.12);
+  width: clamp(300px, 40vw, 520px); /* widened */
+  height: 44px;
+  padding: 0 10px;
+  transition: box-shadow 0.2s ease;
+}
+
+.header-search:focus-within {
+  box-shadow: 0px 0px 0px 2px rgba(255, 153, 0, 0.4);
+}
+
+.header-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  font-size: 15px;
+  color: #4a2d00;
+  background: transparent;
+}
+
+.header-search input::placeholder {
+  color: #757575;
+  opacity: 0.85;
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-btn img {
+  width: 18px;
+  height: 18px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.search-btn:hover img {
+  opacity: 1;
+}
+
+/* ---------------- RIGHT NAV ---------------- */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: 520;
+  color: #0c0c0c;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+  color: #5d3801;
+}
+
+.cart img {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 1024px) {
+  .header {
+    padding: 0 30px;
+  }
+
+  .header-search {
+    width: clamp(240px, 45vw, 400px);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .header-search {
+    width: 200px;
+  }
+
+  .nav-item {
+    font-size: 16px;
+  }
+}
