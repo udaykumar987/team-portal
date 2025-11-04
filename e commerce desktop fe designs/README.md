@@ -14,3 +14,36 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+Setup and Requirements
+Prerequisites
+
+Ensure the following are installed on your system:
+
+Node.js (version 18 or later)
+
+npm (comes bundled with Node.js)
+
+Installation Steps
+
+Clone the repository
+
+git clone https://github.com/<organization>/<repository>.git
+
+
+Navigate into the project directory
+
+cd e-comm-desktop-view
+
+
+Install dependencies
+
+npm install
+
+
+Start the development server
+
+npm run dev
+
+
+Open the provided local URL (typically http://localhost:5173) in your browser.
