@@ -1,0 +1,82 @@
+
+.promo-scroll-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 20px;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+/* Wrapper that holds two sets of images for seamless loop */
+.promo-scroll-content {
+  display: flex;
+  align-items: center;
+  animation: promoScroll 45s linear infinite;
+  /* must be wide enough to fit two sets perfectly */
+  width: max-content; /* auto-expands to image width */
+}
+
+.promo-scroll-content img {
+  width: 180px;
+  height: auto;
+  margin: 0 18px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.promo-scroll-content img:hover {
+  transform: scale(1.05);
+}
+
+/* Fixed: exact loop width */
+@keyframes promoScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Prevent sub-pixel rounding gap */
+.promo-scroll-content::after {
+  content: "";
+  flex: 0 0 1px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+  .promo-scroll-content img {
+    width: 150px;
+    margin: 0 14px;
+  }
+  .promo-scroll-content {
+    animation-duration: 35s;
+  }
+}
+
+@media (max-width: 768px) {
+  .promo-scroll-content img {
+    width: 120px;
+    margin: 0 10px;
+  }
+  .promo-scroll-content {
+    animation-duration: 30s;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-scroll-content img {
+    width: 100px;
+    margin: 0 8px;
+  }
+  .promo-scroll-content {
+    animation-duration: 25s;
+  }
+}
