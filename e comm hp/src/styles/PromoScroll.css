@@ -1,0 +1,97 @@
+/* ===========================
+   PROMO SCROLL - FINAL DESIGN
+   (Seamless + Squared Cards)
+=========================== */
+
+.promo-scroll-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 30px;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+/* Two image sets inside scroll */
+.promo-scroll-content {
+  display: flex;
+  align-items: center;
+  animation: promoScroll 45s linear infinite;
+  width: max-content;
+}
+
+/* Each image now sits inside a clean square card */
+.promo-scroll-content img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  background-color: #f9f9f9;
+  margin: 0 18px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+}
+
+.promo-scroll-content img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Infinite seamless scroll */
+@keyframes promoScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Fix sub-pixel rendering gaps */
+.promo-scroll-content::after {
+  content: "";
+  flex: 0 0 1px;
+}
+
+/* =====================
+   RESPONSIVE DESIGN
+===================== */
+
+@media (max-width: 1024px) {
+  .promo-scroll-content img {
+    width: 150px;
+    height: 150px;
+    margin: 0 14px;
+  }
+  .promo-scroll-content {
+    animation-duration: 35s;
+  }
+}
+
+@media (max-width: 768px) {
+  .promo-scroll-content img {
+    width: 120px;
+    height: 120px;
+    margin: 0 10px;
+  }
+  .promo-scroll-content {
+    animation-duration: 30s;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-scroll-content img {
+    width: 100px;
+    height: 100px;
+    margin: 0 8px;
+  }
+  .promo-scroll-content {
+    animation-duration: 25s;
+  }
+}
