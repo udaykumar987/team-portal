@@ -1,0 +1,85 @@
+
+.wear-scroll-container {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 30px 0 40px;
+  text-align: center;
+}
+
+.wear-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+/* Two side-by-side identical strips */
+.wear-track {
+  display: flex;
+  width: max-content;
+  animation: wearLoop 40s linear infinite;
+}
+
+.wear-strip {
+  display: flex;
+}
+
+.wear-strip img {
+  width: 220px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 18px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.wear-strip img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes wearLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Hide scrollbar just in case */
+.wear-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .wear-strip img {
+    width: 180px;
+    height: 260px;
+    margin: 0 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wear-strip img {
+    width: 150px;
+    height: 220px;
+    margin: 0 10px;
+  }
+  .wear-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wear-strip img {
+    width: 120px;
+    height: 180px;
+    margin: 0 8px;
+  }
+}
